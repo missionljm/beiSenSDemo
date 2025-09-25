@@ -7,13 +7,10 @@ import com.yonyou.beisendemo.vo.constants.StatusEnum;
 import jakarta.servlet.http.HttpServletResponse;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/test-login")
+@RequestMapping("/test-login/api")
 public class LoginTestController {
 
     @Autowired
@@ -23,7 +20,7 @@ public class LoginTestController {
      * 用户名和密码登录
      * 可以根据星球编号/用户名进行密码匹配
      */
-    @PostMapping("/login/username")
+    @GetMapping("/login/username")
     public ResVo<Boolean> login(@RequestParam(name = "username") String username,
                                 @RequestParam(name = "password") String password,
                                 HttpServletResponse response) {

@@ -51,6 +51,7 @@ public class SelfTraceIdGenerator {
             log.error("generate trace id error!", e);
             return UUID.randomUUID().toString().replaceAll("-", "");
         }
+        log.info("traceId: {}", traceId);
         return traceId.toString();
     }
 

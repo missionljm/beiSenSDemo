@@ -37,3 +37,6 @@ paicoding:
     issuer: beiSen_demo # 签发者
     secret: hello_world # 签名密钥
     expire: 432000000 # jwt的有效期，默认30天
+
+env:
+  name: dev

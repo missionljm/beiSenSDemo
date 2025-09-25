@@ -129,7 +129,7 @@ public class ForumExceptionHandler implements HandlerExceptionResolver {
             return true;
         }
 
-        // 数据接口请求
+        // 数据接口请求 -- 使用路径匹配器
         AntPathMatcher pathMatcher = new AntPathMatcher();
         if (pathMatcher.match("/**/api/**", request.getRequestURI())) {
             return true;

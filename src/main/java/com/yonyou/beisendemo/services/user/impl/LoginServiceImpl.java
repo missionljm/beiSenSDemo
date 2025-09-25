@@ -31,9 +31,9 @@ public class LoginServiceImpl implements LoginService {
         if (ObjectUtil.isEmpty(user)){
             throw ExceptionUtil.of(StatusEnum.USER_EXISTS , "username" +  username);
         }
-        if (!userPwdEncoder.match(password , user.getPassword())){
-            throw ExceptionUtil.of(StatusEnum.USER_PWD_ERROR);
-        }
+//        if (!userPwdEncoder.match(password , user.getPassword())){
+//            throw ExceptionUtil.of(StatusEnum.USER_PWD_ERROR);
+//        }
         Long userId = user.getId();
         // 登录成功，返回对应的session
         ReqInfoContext.getReqInfo().setUserId(userId);
